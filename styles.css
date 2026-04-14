@@ -1,0 +1,213 @@
+/* Box-sizing for all elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #a3bfd8;
+  font-family: 'Georgia', serif;
+  color: #2d2d2d;
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid #2d2d2d;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+/* Header, Section, Footer */
+header, section, footer {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #c0d2e2;
+  border-radius: 20px;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
+  border: 3px dotted #ffffff;
+  transition: transform 0.3s ease;
+}
+
+header:hover, section:hover {
+  transform: translateY(-5px);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2e2e2e;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.4rem;
+}
+
+/* Card Layout */
+.card {
+  background-color: #c0d2e2;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  border-radius: 25px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border: thick dotted #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Profile Header with Flexbox */
+.profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.profile-text {
+  flex: 1; /* allows the text to take up remaining space */
+  padding-left: 40px; 
+}
+
+
+.profile-pic-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  overflow: hidden;  /* keeps the circle shape */
+  border: 3px solid #d5daf1;
+  margin-left: 20px; /* optional spacing from text */
+}
+
+/* Image inside the circle */
+.profile-pic {
+  width: 160px;      /* slightly larger than wrapper */
+  height: 160px;
+  object-fit: cover;  /* ensures image fills the circle */
+  transform: translateX(-25px); /* moves image left inside circle */
+}
+/* Hover effect */
+.profile-pic-wrapper:hover .profile-pic {
+  transform: translateX(-25px) scale(1.05); /* zooms image slightly on hover */
+}
+
+
+/* Links */
+a {
+  color: #5785db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #95c4eb;
+  text-decoration: underline;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0 1rem 0;
+  border: 2px solid #5785db;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #f0f4fb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #95c4eb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(87, 133, 219, 0.5);
+}
+
+/* Buttons */
+button {
+  background-color: #5785db;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #95c4eb;
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-text {
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .profile-pic {
+    margin: 0 auto 1rem auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  header, section, footer {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 0.8rem 1rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  table th, table td {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>A Digital CV</title>
+  <meta name="description" content="Digital CV of Leah Calabro, an aspiring software engineer at Springboard.">
+</head>
+<body>
+
+  <!-- Header / Profile -->
+  <header class="profile-header">
+    <div class="profile-pic-wrapper">
+      <img src="imgs/IMG_7242.jpg" class="profile-pic" alt="Profile Photo">
+    </div>
+
+    <div class="profile-text">
+      <h1>Leah Calabro</h1>
+      <p>Email: Leahc9799@gmail.com</p>
+      <p>Phone: (774) 991-3618</p>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="card" id="profile">
+    <h2>Profile</h2>
+    <p>An inspired student at Umass Global/Springboard's software engineering bootcamp.</p>
+    <p>Proactive and goal-oriented worker excelling in time management and problem solving. Known for reliability and adaptability, with a swift capacity to learn and apply new skills. Demonstrated a track record of effectively managing tasks and overcoming challenges. Dedicated to achieving success in any endeavor.</p>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section class="card" id="experience">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>
+        <h3>Sales Associate - Burlington Coat Factory</h3>
+        <p>05/2025 - Current Date</p>
+        <p>Cashed out customers, put security tags on clothes, cleaning, and restocking.</p>
+      </li>
+      <li>
+        <h3>Flight Crew - Skyzone</h3>
+        <p>03/2024 - 04/2024</p>
+        <p>Supervised kids on trampolines while ensuring rules were enforced.</p>
+      </li>
+      <li>
+        <h3>Cashier - Scailos County Bakery</h3>
+        <p>06/2023 - 09/2023</p>
+        <p>Took customer orders, packaged pastries, completed transactions, made pizza boxes, cleaned, prepared coffee, restocked, and decorated cakes.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Education Section -->
+  <section class="card" id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <h3>Umass Global/Springboard Software Engineering Bootcamp</h3>
+        <p>2025-2026</p>
+        <p>Currently a student in this software engineering bootcamp.</p>
+      </li>
+      <li>
+        <h3>Computer Engineering - Stonehill College</h3>
+        <p>2028</p>
+        <p>Currently using my summer break and gap year to pursue a job through a Software Engineering Bootcamp.</p>
+      </li>
+      <li>
+        <h3>Diploma - Seekonk High School</h3>
+        <p>2024</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="card" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Programming</li>
+      <li>Active Listening</li>
+      <li>Customer Service</li>
+      <li>Patience & Empathy</li>
+      <li>Strong Work Ethic</li>
+    </ul>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="card" id="technologies">
+    <h2>Technologies</h2>
+    <div>
+      <h3>Web Development</h3>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section class="card" id="tools">
+    <h2>Tools</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Description</th>
+          <th>Proficiency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Visual Studio Code</td>
+          <td>A free source-code editor made by Microsoft for Windows, Linux, and macOS.</td>
+          <td>Intermediate</td>
+        </tr>
+        <tr>
+          <td>Slack</td>
+          <td>Collaboration hub for work, with channels, messaging, and file sharing.</td>
+          <td>Intermediate</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="card" id="projects">
+    <h2>Projects</h2>
+    <p>Will be added shortly.</p>
+  </section>
+
+  <!-- Accounts Section -->
+  <section class="card" id="accounts">
+    <h2>Accounts</h2>
+    <p>GitHub: <a href="https://github.com/Leah224" target="_blank">GitHub Profile</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/leah-calabro/" target="_blank">LinkedIn Profile</a></p>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="card" id="contact">
+    <h2>Contact Me</h2>
+    <p>If you're interested in working together or have any questions, please fill out the form below.</p>
+    <form action="#" method="post">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+
+      <label for="organization">Organization:</label>
+      <input type="text" id="organization" name="organization" placeholder="Company or Institution">
+
+      <label for="role">Your Role:</label>
+      <input type="text" id="role" name="role" placeholder="Your position or title">
+
+      <label for="reason">Reason for Contact:</label>
+      <select id="reason" name="reason" required>
+        <option value="">-- Select a reason --</option>
+        <option value="job">Job Offer</option>
+        <option value="collaboration">Collaboration</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select>
+
+      <fieldset>
+        <legend>Preferred Contact Method:</legend>
+        <input type="radio" id="contact-email" name="preferred_contact" value="email" required>
+        <label for="contact-email">Email</label>
+        
+        <input type="radio" id="contact-phone" name="preferred_contact" value="phone">
+        <label for="contact-phone">Phone</label>
+      </fieldset>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <hr>
+    <p>&copy; 2025 Leah Calabro</p>
+  </footer>
+
+</body>
+</html>
