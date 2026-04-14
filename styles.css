@@ -8,9 +8,17 @@ body {
   background-color: #a3bfd8;
   font-family: 'Georgia', serif;
   color: #2d2d2d;
-  margin: 20px;
+
+  margin: 0;
   padding: 20px;
+
   border: 3px solid #2d2d2d;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   line-height: 1.6;
   transition: background-color 0.3s ease;
 }
@@ -18,12 +26,16 @@ body {
 /* Header, Section, Footer */
 header, section, footer {
   max-width: 800px;
+  width: 100%;
+
   margin: 2rem auto;
   padding: 1.5rem;
+
   background-color: #c0d2e2;
   border-radius: 20px;
   box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.1);
   border: 3px dotted #ffffff;
+
   transition: transform 0.3s ease;
 }
 
@@ -70,32 +82,30 @@ section h2 {
 }
 
 .profile-text {
-  flex: 1; /* allows the text to take up remaining space */
-  padding-left: 40px; 
+  flex: 1;
+  padding-left: 40px;
 }
-
 
 .profile-pic-wrapper {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  overflow: hidden;  /* keeps the circle shape */
+  overflow: hidden;
   border: 3px solid #d5daf1;
-  margin-left: 20px; /* optional spacing from text */
+  margin-left: 20px;
 }
 
 /* Image inside the circle */
 .profile-pic {
-  width: 160px;      /* slightly larger than wrapper */
+  width: 160px;
   height: 160px;
-  object-fit: cover;  /* ensures image fills the circle */
-  transform: translateX(-25px); /* moves image left inside circle */
-}
-/* Hover effect */
-.profile-pic-wrapper:hover .profile-pic {
-  transform: translateX(-25px) scale(1.05); /* zooms image slightly on hover */
+  object-fit: cover;
+  transform: translateX(-25px);
 }
 
+.profile-pic-wrapper:hover .profile-pic {
+  transform: translateX(-25px) scale(1.05);
+}
 
 /* Links */
 a {
@@ -167,26 +177,32 @@ th, td {
   border-bottom: 1px solid #ddd;
 }
 
+/* Prevent horizontal scroll */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  header, section, footer {
+    width: 95%;
+  }
+
   .profile-header {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .profile-text {
-    text-align: center;
-    flex: 1 1 100%;
-  }
-
-  .profile-pic {
-    margin: 0 auto 1rem auto;
+    padding-left: 0;
   }
 }
 
 @media screen and (max-width: 480px) {
   body {
-    margin: 10px;
+    margin: 0;
     padding: 10px;
   }
 
